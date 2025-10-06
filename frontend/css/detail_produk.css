@@ -1,0 +1,201 @@
+/* RESET & GLOBAL */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* beri jarak dari header (jika header.php fixed/top) */
+header {
+    margin-bottom: 40px;
+}
+
+/* LAYOUT */
+.product-page {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 40px 20px;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.image-container,
+.details {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+}
+
+.image-container {
+    flex: 1 1 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform .4s;
+}
+
+.image-container img:hover {
+    transform: scale(1.03);
+}
+
+.details {
+    flex: 1 1 480px;
+    padding: 40px 30px;
+    animation: fadeIn .6s ease-in-out;
+}
+
+/* TEKS UTAMA */
+.details h2 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.category {
+    color: #6e6e6e;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.stok {
+    margin-bottom: 24px;
+}
+
+/* ERROR / INFO */
+.error-message {
+    background: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+/* PILIH UKURAN */
+.sizes {
+    margin-bottom: 28px;
+}
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.size-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.size-box input {
+    display: none;
+}
+
+.size-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    min-height: 48px;
+    padding: 4px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all .25s;
+    user-select: none;
+}
+
+.size-box:hover span {
+    border-color: #000;
+}
+
+.size-box input:checked+span {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* TOMBOL */
+.buttons {
+    margin: 10px 0 40px;
+}
+
+.add-to-bag {
+    padding: 14px 28px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+
+.add-to-bag:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+.add-to-bag:disabled {
+    background: #c4c4c4;
+    cursor: not-allowed;
+}
+
+/* DESKRIPSI */
+.description h4 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ANIMASI & RESPONSIVE */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@media (max-width:768px) {
+    .product-page {
+        padding: 30px 14px;
+        gap: 40px;
+    }
+
+    .details h2 {
+        font-size: 28px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+}
