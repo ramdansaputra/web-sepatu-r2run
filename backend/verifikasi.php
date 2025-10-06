@@ -1,10 +1,7 @@
 <?php
-/* verifikasi.php
-   Halaman admin untuk memverifikasi transaksi (status = Pending)
---------------------------------------------------------------*/
+
 include "koneksi.php";
 
-// ------------------- QUERY -------------------
 $sql = "
     SELECT  t.*,
             u.username AS nama
