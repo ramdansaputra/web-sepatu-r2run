@@ -129,7 +129,7 @@ if (!$query) {
 </head>
 
 <body>
-    <!-- ========== SIDEBAR (copy dari transaksi.php) ========== -->
+  
     <div class="sidebar">
         <div class="sidebar-header">
             <h2>R2RUN</h2>
@@ -146,7 +146,7 @@ if (!$query) {
         </div>
     </div>
 
-    <!-- ========== MAIN CONTENT ========== -->
+   
     <div class="main-content">
         <!-- Header -->
         <div class="header">
